@@ -1,0 +1,107 @@
+.expertise-display
+	padding: 70px 0
+	@media screen and(max-width:1025px)
+		margin-bottom: 50px
+		padding: 50px 0
+	.expertise-title
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+		height: 100%
+		*
+			color: #77777e
+		h1
+			font-size: 24px
+			font-weight: 500
+			margin-bottom: 16px
+		p
+			font-weight: 400
+			font-size: 16px
+			line-height: 30px
+	.wrapper
+		img
+			max-width: 100%
+			height: auto
+			width: 100%
+		@media screen and(max-width:1025px)
+			margin-top: 15px
+.expertise-display-list
+	padding-bottom: 150px
+	overflow: visible
+	&:nth-child(odd)
+		background: #f9f9f9
+		.expertise-wrapper
+		.expertise-caption
+			padding-left: 4.33%
+	&:nth-child(even)
+		.expertise-wrapper
+			flex-direction: row-reverse
+		.expertise-caption
+			padding-right: 4.33%
+
+	@media screen and(max-width:1025px)
+		padding: 50px 0
+		.expertise-image
+			margin-top: 0 !important
+			.wrapper
+				img
+					object-fit: contain !important
+		.expertise-caption
+			margin-top: 16px
+		&:nth-child(odd)
+			.expertise-caption
+				padding-left: 0
+		&:nth-child(even)
+			.expertise-caption
+				padding-right: 0
+
+	@media screen and(max-width:576px)
+		.expertise-image
+			.wrapper
+				height: 300px !important
+				img
+					object-fit: cover !important
+
+	
+	.expertise-wrapper
+		flex: 0 0 100%
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -15px
+	.expertise-item
+		padding: 0 15px
+		display: flex
+		flex: 0 0 100%
+
+	.expertise-image
+		position: relative
+		margin-top: -50px
+		.wrapper
+			height: 520px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	.expertise-caption
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		flex-direction: column
+		height: 100%
+		*
+			color: #77777e
+		h2
+			margin-bottom: 16px
+			color: #1a1a1d
+			font-size: 26px
+			font-weight: 600
+		strong
+			font-size: 16px
+			font-weight: 700
+			margin-bottom: 8px
+			display: inline-block
+		p
+			line-height: 30px
+			

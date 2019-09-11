@@ -1,0 +1,93 @@
+.contact-banner-information
+	overflow: visible
+	padding: 10px 0 20px 0
+	margin-bottom: 10px
+	background: #d71921
+	@media screen and(max-width:1025px)
+		margin-bottom: 10px
+	.banner-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.banner-right
+			padding: 30px 50px
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			flex-direction: column
+		.banner-left
+			padding: 30px 50px
+			position: relative
+		@media screen and(max-width:768px)
+			flex: 0 0 100%
+			flex-wrap: wrap
+			.banner-right
+				padding: 30px 50px 0 0
+				flex:  0 0 100%
+				max-width: 100%
+			.banner-left
+				padding: 30px  0 50px 0
+				flex:  0 0 100%
+				max-width: 100%
+		h2
+			font-size: 40px
+			color: #ffffff
+			font-weight: 500
+			margin-bottom: 10px
+			@media screen and(max-width:1025px)
+				font-size: 32px
+		p
+			color: #ff9c9c
+			font-weight: 500
+
+		.contact-us-button
+			padding: 10px 30px
+			font-weight: 500
+			font-size: 16px
+			color: #d71921
+			width: 155px
+			white-space: nowrap
+			background: #ffffff
+			text-transform: uppercase
+			&:hover
+				.information-wrapper
+					opacity: 1
+					pointer-events: auto
+		.information-wrapper
+			z-index: 11
+			position: absolute
+			top: 70px
+			left: 50px
+			transition: opacity .3s ease-in-out
+			opacity: 0
+			pointer-events: none
+			padding: 20px
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			flex-direction: column
+			background: #ffffff
+			box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
+			@media screen and(max-width:768px)
+				left: 0
+	
+			*
+				font-weight: 500
+				color: #d71921
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: 16px
+				text-transform: none
+				white-space: nowrap
+				text-decoration: none
+				&:not(:last-child)
+					border-bottom: 1px solid #e1e1e1
+					padding-bottom: 15px
+					margin-bottom: 10px
+				em
+					margin-top: 2px
+					margin-right: 8px
+					font-size: 18px
+				

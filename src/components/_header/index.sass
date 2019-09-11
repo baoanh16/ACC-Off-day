@@ -1,0 +1,340 @@
+.acc-header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100px
+	background-color: #ffffff
+	z-index: 200
+	box-shadow: 0 -4px 20px 0px #0000008f
+	.wrapper
+		position: relative
+		display: flex
+		.logo
+			+f-center
+			img
+				max-width: 100%
+		.top-nav-menu
+			margin-left: auto
+			margin-right: 15px
+			width: 100%
+			ul
+				display: flex
+				align-items: center
+				justify-content: flex-end
+				height: 100%
+				li
+					font-size: 14px
+					+ li
+						margin-left: 12px
+			@media (max-width: 992px)
+				margin-left: 0
+				margin-right: 0
+				ul
+					flex-direction: column
+					color: #fff
+					align-items: flex-start
+					li
+						margin-left: 0 !important
+						padding: 0 1.125rem 1.125rem
+						a
+							display: block
+							padding-top: 18px
+		.nav-wrapper
+			margin-left: auto
+			display: flex
+			flex-direction: column
+			.top-nav
+				padding: 8px 0
+				display: flex
+				.Module-140
+					margin-left: auto
+				.searchbox
+					display: flex
+					input
+						transition: .3s all ease-in-out
+						margin-right: 8px
+						border-radius: 14px
+						border: 1px solid #e1e1e1
+						padding-left: 1rem
+						font-size: r(14px)
+					::-webkit-input-placeholder
+						font-size: r(14px)
+						color: #e1e1e1
+					
+					button
+						background: none
+						border: 0
+						cursor: pointer
+						span
+							+f-center
+							color: color-get($mau,extra)
+							+wh(28px)
+							border: 1px solid #e1e1e1
+							border-radius: 50%
+				.Module-141,.Module-142
+					margin-left: 8px
+				.facebook, .youtube
+					&:hover
+						text-decoration: none
+					span
+						+f-center
+						background: #235695
+						+wh(28px)
+						border-radius: 50%
+						color: color-get($mau,trang)
+						font-size: r(18px)
+				.youtube
+
+					span
+						background: #e3352c
+				.language
+					margin-left: 13px
+					height: 100%
+					+f-center
+					a
+						font-size: r(11px)
+						padding: 2px 5px
+						border-radius: 2px
+						color: color-get($mau,text-9)
+						&.active
+							background: #959595
+							color: color-get($mau,trang)
+				.toggle-menu
+					display: none
+			.bottom-nav
+				display: flex
+				.searchbox
+					display: flex
+					padding-left: 2.125rem
+					margin-top: 20px
+					input
+						transition: .3s all ease-in-out
+						margin-right: 8px
+						border-radius: 14px
+						border: 1px solid #e1e1e1
+						padding-left: 1rem
+						font-size: r(14px)
+					::-webkit-input-placeholder
+						font-size: r(14px)
+						color: #e1e1e1
+					button
+						background: none
+						border: 0
+						cursor: pointer
+						span
+							+f-center
+							color: white
+							+wh(28px)
+							border: 1px solid #e1e1e1
+							border-radius: 50%
+				.nav
+					border-top: 1px solid #e1e1e1
+					margin-left: auto
+					display: flex
+					.nav-item
+						padding:  r(18px)
+						padding-top: 0
+						&:first-child
+							.nav-link
+								font-size: 0
+								&:before
+									+mtrl('\f2dc')
+									font-size: r(17px)
+						.nav-link
+							padding-top: 18px
+							font-size: r(15px)
+							display: block
+							color: color-get($mau,text-6)
+							position: relative
+							&:after
+								position: absolute
+								top: -1px
+								display: block
+								width: 0%
+								left: 50%
+								height: 2px
+								opacity: 0
+								transform: translateX(-50%)
+								content: ''
+								transition: .3s all ease-in-out
+								background: color-get($mau, trang)
+								@media (min-width: 992px)
+									background: color-get($mau, extra)
+							&.active, &:hover
+								text-decoration: none
+								@media (min-width: 992px)
+									color: color-get($mau,text-3)
+									&:after
+										width: 100%
+										opacity: 1
+							&.active
+								@media (max-width: 992px)
+									&:after
+										width: 100%
+										top: 111%
+										opacity: 1
+				.has-sub
+					&:hover
+						.sub-menu
+							display: flex
+					.sub-menu
+						position: absolute
+						top: 100%
+						left: 0
+						width: 100%
+						display: none
+						flex-wrap: wrap
+						background: rgba(#ffffff, .95)
+						padding: 0 30px
+						box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2)
+						z-index: 2
+	
+
+					.sub-link
+						font-size: r(15px)
+						display: block
+						color: color-get($mau,text-6)
+						text-decoration: none
+						padding: 15px 
+						border-top: 1px solid #e1e1e1
+						font-weight: 500
+						position: relative
+
+						&:hover,&.active
+							color: #08478c
+							background: #f8f9fa
+					.sub-item
+						width: 25%
+						@media screen and(max-width:993px)
+							width: 100%
+						
+						&:first-child
+							.sub-link
+								border-top: 0
+	@media (max-width: 992px)
+		height: 50px
+		.wrapper
+			
+			.logo
+				padding: 10px 0
+				img
+					max-height: 31px
+			.nav-wrapper
+				.top-nav
+					margin: auto
+					.toggle-menu
+						+f-center
+						margin-left: 8px
+						flex-direction: column
+						span
+							display: block
+							width: 2rem
+							background: color-get($mau, text-3)
+							height: 4px
+							border-radius: 2px
+							transition: .3s all ease-in-out
+							&:first-child
+								width: 1.4rem
+								margin-left: auto
+							+ span
+								margin-top: 5px
+						&.active
+							span
+								margin: 0
+								&:nth-child(2)
+									// display: none
+									transform: translateX(1000%)
+								&:first-child
+									top: 27px
+									width: 2rem
+									position: absolute
+									transform: rotate(-45deg) !important
+									margin-bottom: 0 !important
+								&:nth-child(odd)
+									margin-bottom: 14px
+									transform: rotate(45deg)
+				.bottom-nav
+					position: fixed
+					top: 50px
+					left: -100%
+					width: 300px
+					height: calc(100vh - 51px)
+					background: color-get($mau, main)
+					transition: .7s all ease-in-out
+					overflow-y: auto
+					padding-bottom: 32px
+					.nav
+						flex-direction: column
+						margin-left: initial
+						width: 100%
+						border: 0
+						.nav-item
+							transform: translateX(-100%)
+							transition: .7s all ease-in-out
+							&:first-child
+								.nav-link
+									font-size: r(15px)
+									&:before
+										display: none
+							.nav-link
+								color: color-get($mau,trang)
+					.sub-menu
+						display: block !important
+						position: relative !important
+						top: auto!important
+						left: auto !important
+						transform: none !important
+						margin-top: 15px
+						padding: 0 15px
+					
+					&.active
+						left: 0
+						.nav
+							.nav-item
+								transform: translateX(0%)
+								&:first-child
+									transition-delay: .25s
+								&:nth-child(2)
+									transition-delay: .3s
+								&:nth-child(3)
+									transition-delay: .35s
+								&:nth-child(4)
+									transition-delay: .4s
+								&:nth-child(5)
+									transition-delay: .45s
+								&:nth-child(6)
+									transition-delay: .5s
+								&:nth-child(7)
+									transition-delay: .55s
+								&:nth-child(8)
+									transition-delay: .6s
+								&:nth-child(9)
+									transition-delay: .65s
+		.backdrop
+			width: calc(100% - 300px)
+			background: rgba(255,255,255,0.5)
+			height: 100%
+			top: 50px
+			position: fixed
+			right: 0
+			transition: .7s all ease-in-out
+			transform: translateX(100%)
+			&.active
+				transform: translateX(0%)
+	@media (max-width: 490px)
+		.wrapper
+			.nav-wrapper
+				.top-nav
+					.searchbox
+						input
+							box-shadow: 1px 1px 20px 0px #00000047
+							position: absolute
+							height: 28px
+							left: 11px
+							width: 280px
+							top: 61px
+							z-index: 1
+				.bottom-nav
+					.nav
+						padding: 0 1rem

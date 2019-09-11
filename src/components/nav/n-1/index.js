@@ -1,0 +1,70 @@
+const nav = {
+	mainNav: () => {
+		$(".acc-nav-1 .nav-wrap .nav-toggle").click(function() {
+			$(this)
+				.parents(".nav-wrap")
+				.siblings()
+				.find("nav")
+				.slideUp();
+			$(this)
+				.parents(".nav-wrap")
+				.siblings()
+				.find(".nav-toggle")
+				.removeClass("active");
+			$(this).toggleClass("active");
+			$(this)
+				.siblings("nav")
+				.slideToggle();
+		});
+
+		$(".acc-nav-1 .nav-wrap nav").each(function() {
+			if ($(this).find("a.active").length === 1) {
+				$(this).slideDown();
+				$(this)
+					.siblings()
+					.addClass("active");
+				$(this)
+					.parent()
+					.siblings()
+					.find("nav")
+					.slideUp();
+			}
+		});
+		$(".acc-nav-1 .nav-wrap").each(function() {
+			if ($(this).hasClass("active")) {
+				$(this)
+					.children("nav")
+					.slideDown();
+			} else {
+				$(this)
+					.children("nav")
+					.slideUp();
+			}
+		});
+	},
+	career: () => {
+		$(".acc-career-2 .position-wrapper .detail-wrapper").slideUp();
+		$(".acc-career-2 .position-wrapper .title-wrapper").click(function() {
+			$(this)
+				.parents(".position-wrapper")
+				.siblings()
+				.find(".detail-wrapper")
+				.slideUp()
+				.removeClass("active");
+			$(this)
+				.parents(".position-wrapper")
+				.siblings()
+				.find(".title-wrapper")
+				.removeClass("active");
+			$(this).toggleClass("active");
+			$(this)
+				.siblings(".detail-wrapper")
+				.slideToggle(1000);
+		});
+	},
+
+	navInit: () => {
+		// nav.mainNav();
+		nav.career();
+	}
+};

@@ -1,0 +1,34 @@
+.acc-contact-1
+	@media (min-width: 992px)
+		padding: r(70px) 0
+	h1
+		padding-bottom: 2rem
+	.info
+		h2
+			color: color-get($mau,main)
+			text-transform: uppercase
+			font-weight: 500
+			padding-bottom: 1rem
+			font-size: r(18px)
+		p 
+			color: color-get($mau,text-6)
+			&.tel
+				margin-top: 1rem
+			span
+				color: color-get($mau,main)
+			strong
+				font-weight: 600
+		a
+			margin-top: 25px
+			display: inline-block
+			color: color-get($mau,extra)
+			position: relative
+			&:before
+				+mtrl('\f142')
+				font-size: 1.2rem
+				right: -1.5rem
+				top: 50%
+				transform: translateY(-50%)
+				position: absolute
+		@media (max-width: 992px)
+			margin-bottom: 30px
