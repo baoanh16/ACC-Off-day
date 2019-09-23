@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt"
- exclude-result-prefixes="msxsl">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
@@ -32,7 +32,14 @@
 			<div class="detail-wrapper">
 				<xsl:value-of select='FullContent' disable-output-escaping='yes'></xsl:value-of>
 				<div class="wrapper-btn">
-					<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
+					<a class="btn-apply" href="#" data-fancybox='' data-type='iframe'>
+						<xsl:attribute name='href'>
+							<xsl:value-of select='ApplyUrl'></xsl:value-of>
+						</xsl:attribute>
+						<xsl:text>Apply for this job</xsl:text>
+					</a>
+					<a class="btn-appl-form" href="/Data/Sites/1/media/acc_application_form.docx"
+						download="">Application Form</a>
 				</div>
 			</div>
 		</div>

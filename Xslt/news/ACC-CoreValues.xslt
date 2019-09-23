@@ -132,14 +132,22 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="img">
-						<img>
-						<xsl:attribute name='src'>
-							<xsl:value-of select='ImageUrl'></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name='alt'>
-							<xsl:value-of select='Title'></xsl:value-of>
-						</xsl:attribute>
-						</img>
+						<xsl:choose>
+							<xsl:when test="BriefContent != ''">
+								<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
+							</xsl:when>
+							<xsl:otherwise>
+								<img>
+								<xsl:attribute name='src'>
+									<xsl:value-of select='ImageUrl'></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name='alt'>
+									<xsl:value-of select='Title'></xsl:value-of>
+								</xsl:attribute>
+								</img>
+							</xsl:otherwise>
+						</xsl:choose>
+
 					</div>
 				</div>
 			</div>

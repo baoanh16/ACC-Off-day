@@ -168,3 +168,144 @@ section
 	@media screen and(max-width:1025px)
 		.acc-news-1
 			padding: 40px 0 50px 0 !important
+
+
+// Form Ung Tuyen
+.apply-frm
+	margin: 0
+	padding: 30px 15px
+	>div
+		width: 100%
+	#ctl00_phMain_jobApply_pnlNewComment
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		>.form-group
+			width: 100%
+		.col-left,.col-right
+			flex: 0 0 100%
+			max-width: 100%
+			display: flex
+			flex-wrap: wrap
+			>.form-group
+				margin-bottom: 10px
+			@media (min-width: 576px)
+				margin: 0 -10px
+				>.form-group
+					padding: 0 10px
+			
+	.col-left
+		>.form-group
+			flex: 0 0 100%
+			max-width: 100%
+			@media (min-width: 576px)
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+					flex: 0 0 50%
+					max-width: 50%
+	.col-right
+		>.form-group
+			flex: 0 0 100%
+			max-width: 100%
+
+	h4
+		font-size: 16px
+		font-weight: 600
+		color: #034da2
+		text-transform: uppercase
+		margin-bottom: 20px
+		@media (min-width: 992px)
+			width: 100%
+	.fa-exclamation-triangle
+		top: 50%
+		transform: translateY(-50%)
+		right: 15px
+		color: red
+	.label
+		font-size: 14px
+		font-weight: 400
+		color: #999999
+		margin-bottom: 4px
+		.required
+			color: red
+	input[type="text"], input[type="password"], textarea
+		width: 100%
+		border: 1px solid #e5e5e5
+		color: lighten(black, 20%)
+		font-size: 13px
+		padding: 7px 15px
+		font-family: 'Bai Jamjuree',sans-serif
+		&:focus
+			border-color: #034da2
+	input[type="text"],input[type="password"]
+		height: 50px
+	textarea
+		height: 200px
+
+	.RadUpload
+		width: auto !important
+	.RadAsyncUpload
+		.ruDropZone
+			display: none
+		.ruFileWrap
+			position: relative
+			display: block
+			height: 50px
+		.ruFileInput, .ruBrowse
+			height: 50px
+			width: 120px
+			height: 50px
+			background: #e5e5e5
+			text-transform: uppercase
+			font-size: 15px
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 0
+		.ruFileInput
+			position: absolute
+			top: 0
+			opacity: 0
+	.frm-btn
+		margin-top: 20px
+		text-align: left
+		input[type="submit"]
+			height: 40px
+			width: 100%
+			max-width: 180px
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			border-radius: 0
+			background: transparent
+			border: 2px solid #ed1c24
+			color: #ed1c24
+			text-transform: uppercase
+
+
+.btn-more
+	margin-top: 1rem
+	display: table
+	line-height: 34px
+	text-align: center
+	color: color-get($mau,extra)
+	border: 1px solid color-get($mau,extra)
+	height: 34px
+	min-width: 132px
+	border-radius: 17px
+	position: relative
+	transition: .3s all ease-in-out
+	&:hover
+		background: color-get($mau, extra)
+		text-decoration: none
+		color: color-get($mau,trang)
+	&:after
+		+mtrl('\f142')
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: .4rem
+		font-size: 1.2rem
+		display: block
